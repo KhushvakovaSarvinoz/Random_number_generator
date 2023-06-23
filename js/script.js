@@ -9,11 +9,15 @@ const generate = ()=>{
     const maxEl = document.querySelector("#max");
     const min = Number(minEl.value);
     const max = Number(maxEl.value);
-
-    console.log(typeof(min))
-
-    const plaseholderEL = document.querySelector("#placeholder");
-    plaseholderEL.textContent = getRandomNumber(min, max);
+   
+    if(minEl.value < maxEl.value){
+        if(minEl.value!== "" && maxEl.value!==""){ 
+            const plaseholderEL = document.querySelector("#placeholder");
+            plaseholderEL.textContent = getRandomNumber(min, max); 
+        }
+       
+    }
+        
 }
 
 
